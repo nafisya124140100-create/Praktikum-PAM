@@ -1,26 +1,40 @@
-This is a Kotlin Multiplatform project targeting Android.
+# Tugas Praktikum 2
+Nama: Nafisya Ghalia
 
-* [/shared](./shared/src) is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - [commonMain](./shared/src/commonMain/kotlin) is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    the [iosMain](./shared/src/iosMain/kotlin) folder would be the right place for such calls.
-    Similarly, if you want to edit the Desktop (JVM) specific part, the [jvmMain](./shared/src/jvmMain/kotlin)
-    folder is the appropriate location.
+NIM: 124140100
+## News Feed Simulator
 
-### Running the apps
+Aplikasi News Feed Simulator menggunakan Kotlin.
 
-Use the run configurations provided by the run widget in your IDE's toolbar. You can also use these commands and options:
+### Fitur
+1. Flow untuk mensimulasikan berita baru setiap 2 detik.
+2. Filter berita berdasarkan kategori.
+3. Transform data berita menjadi format tampilan.
+4. StateFlow untuk menyimpan jumlah berita yang sudah dibaca.
+5. Coroutine untuk mengambil detail berita secara asynchronous.
 
-- Android app: `./gradlew :androidApp:assembleDebug`
+## Struktur Proyek
 
-### Running tests
+'''text
+├── shared/            # Module shared (Logic, ViewModel, Repository, Flows)
 
-Use the run button in your IDE's editor gutter, or run tests using Gradle tasks:
 
-- Android tests: `./gradlew :shared:testAndroidHostTest`
+│   └── src/commonMain # Kode
+'''
 
----
+## Screenshoot Aplikasi
+tampilan utama apk
 
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)…
+<img width="490" height="691" alt="Screenshot 2026-09-25 225020" src="https://github.com/user-attachments/assets/a63c6e84-77b5-4ff9-9a06-817be0c99181" />
+
+----
+filter berita
+
+<img width="237" height="527" alt="Screenshot 2026-09-25 232959" src="https://github.com/user-attachments/assets/9d4e5e29-9369-41ae-a77a-c3299fae5f99" />
+
+----
+update data terbaca
+
+<img width="241" height="532" alt="Screenshot 2026-09-25 233022" src="https://github.com/user-attachments/assets/ce5b994a-6f4b-4202-9dff-bf9301f070e8" />
+
+----
